@@ -39,19 +39,20 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 */
 
 // CODE HERE 
-const first = (arr,callBack) => callBack(arr);
+/*const first = (arr,callBack) => callBack(arr);
 const back = (arr) => arr[0];
 let done = first(names,back);
-console.log(done);
-
+console.log(done);*/
+const firstName = (arr) => arr[0];
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// first(names, firstName => {
-//   console.log('The first name in names is ' + firstName)
-// })
+const first = (names, firstName) => {
+  console.log('The first name in names is ' + firstName(names))
+}
+first(names,firstName);
 
 
 
