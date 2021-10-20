@@ -7,16 +7,17 @@
 
 // CODE HERE
 const callBack =(num1,num2) => num1*num2;
-const multiply = (num1,num2,callBack) => callBack(num1,num2);
+/*const multiply = (num1,num2,callBack) => callBack(num1,num2);*/
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-//  multiply(4, 3, callBack => {
-//    console.log('The answer is ' + callBack) //should console.log 12
-//  })
-console.log(multiply(5,5,callBack));
+  const multiply = (num1, num2, callBack) => {
+   console.log('The answer is ' + callBack(num1,num2)) //should console.log 12
+ }
+ multiply(5,5,callBack)
+//console.log(multiply(5,5,callBack));
 
 
 
@@ -91,6 +92,18 @@ console.log(done2);
 */
 
 // CODE HERE 
+const contains = (arr,name1,callBack) => {
+  let boo = true;
+  for(let i=0; i< arr.length; i++){
+    if(arr[i] !== name1){
+      boo = false;
+    }
+  }
+  return wallBack(boo);
+}
+const wallBack = (boo) => boo;
+
+console.log(contains(names, 'Tyler', wallBack));
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
