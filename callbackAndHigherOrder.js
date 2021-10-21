@@ -93,31 +93,29 @@ console.log(done2);
 */
 
 // CODE HERE 
-const contains = (arr,name1,callBack) => {
-  let boo = true;
-  for(let i=0; i< arr.length; i++){
-    if(arr[i] !== name1){
-      boo = false;
-    }
+const contains = (arr,name1,callBack) => callBack(arr,name1);
+
+const result = (names, checkName) => {
+  if(names.includes(checkName)){
+    return true;
   }
-  return wallBack(boo);
-}
-const wallBack = (boo) => boo;
-
-console.log(contains(names, 'Tyler', wallBack));
-
+  else{
+    return false;
+  }
+} 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// contains(names, 'Colt', result => {
-//   if(result === true){
-//     console.log('Colt is in the array')
-//   } else {
-//     console.log('Colt is not in the array')
-//   }
-// })
+/*const contains = (names, checkName, result) => {
+  if(result === true){
+    console.log(`${checkName} is in the array`)
+  } else {
+    console.log(`${checkName} is not in the array`)
+  }
+}*/
+console.log(contains(names,'mikie', result));
 
 
 
@@ -130,6 +128,20 @@ console.log(contains(names, 'Tyler', wallBack));
 */
 
 // CODE HERE
+const uniq = (arr,callBack) =>callBack(arr);
+const uniqCb = (uniqArr) => {
+  let count = 1;
+  for(let i =0; i<uniqArr.length;i++){
+    for(let j = count; j < uniqArr.length; j++){
+      if(uniqArr[i] === uniqArr[j]){
+        uniqArr.splice(j,1);
+      }
+    }
+    count++;
+  }
+  return uniqArr;
+};
+
 
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
@@ -139,6 +151,19 @@ console.log(contains(names, 'Tyler', wallBack));
 */
 
 // CODE HERE
+const uniqCb2 = (uniqArr) => {
+  let count = 1;
+  let ring;
+  for(let i =0; i<uniqArr.length;i++){
+    for(let j = count; j < uniqArr.length; j++){
+      if(uniqArr[i] === uniqArr[j]){
+        uniqArr.splice(j,1);
+      }
+    }
+    count++;
+  }
+  console.log(`The new names array with all the duplicate items removed is ${uniqArr}.`);
+};
 
 
 
